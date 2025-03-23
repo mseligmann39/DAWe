@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Actividades</title>
+
+</head>
+
+<body>
+
+    <h1>Nati te amo</h1>
+
+    <div class="coral act">
+        <p>Actividad 1:</p>
+        <script src="script1.js"></script>
+    </div>
+
+    <div class="act green">
+        <p>Actividad 2:</p>
+        <script src="script2.js"></script>
+    </div>
+
+    <div class="act coral">
+        <p>Actividad 3: Pide al usuario un numero n y usa un bucle while para sumar todos los numeros pares desde el 2
+            hasta n, muestra el resultado al finalizar</p>
+        <button id="act3">Iniciar actividad 3</button>
+        <script src="script3.js"></script>
+
+    </div>
+
+    <div class="act green">
+        <p>Actividad 4: Escribe un programa que utilice un bucle while para multiplicar números ingresados por el
+            usuario. El programa debe pedir números hasta que el usuario ingrese un 0, y luego mostrar el producto de
+            todos los números ingresados (excepto el 0).</p>
+        <button id="act4">Iniciar actividad 4</button>
+        <script src="script4.js"></script>
+    </div>
+
+    <div class="act coral">
+        <p>Actividad 5: Escribe un programa que actúe como una calculadora básica. El usuario debe ingresar dos números
+            y elegir una operadoración (+, -, *, /). Según el operador ingresado, el programa debe realizar la operación
+            correspondiente usando switch-case.</p>
+        <button id="act5">Iniciar actividad 5</button>
+        <script src="script5.js"></script>
+    </div>
+
+
+    <div class="act green">
+        <p>Actividad 6: Convertir clasificacion numerica de 0 a 10 en calificativa.</p>
+        <button id="act6">Iniciar actividad 6</button>
+        <script src="script6.js"></script>
+    </div>
+    <div class="coral act">
+        <p>Actividad 7: Escribe un programa que recorra un array de nombres utilizando un bucle foreach y los imprima en
+            pantalla. </p>
+        <script src="script7.js"> </script>
+    </div>
+
+    <div class="green act">
+        <p>Actividad 8: En este ejercicio, pedirás al usuario que introduzca su nombre. El programa continuará pidiendo
+            el nombre hasta que el usuario introduzca su nombre correctamente (predefinido en el código).</p>
+        <button id="act8">Iniciar actividad 8</button>
+        <script src="script8.js"> </script>
+
+        <div class="coral act">
+            <p>Actividad 9: Adivina el numero del 1 al 100</p>
+            <button id="act9">Iniciar actividad 9</button>
+            <script src="script9.js"> </script>
+        </div>
+
+        <div class="green act">
+            <p>Actividad 10: Banco</p>
+            <a href="actividad10.html"> <button>HomeBanking</button> </a>
+        </div>
+
+        <div class="coral act">
+            <p>Actividad 11: Usando un bucle for escribe un script que pida un valor entero y muestre en pantalla una
+                lista de números desde el 0 al valor tecleado. Los números se separarán por comas.</p>
+            <button id="act11">Iniciar actividad 11</button>
+            <script src="script11.js"> </script>
+        </div>
+
+        <div class="green act">
+            <p>Actividad 12:Ayudar a un instituto a generar horarios semanales para las clases. Solicitar al usuario
+                cuántos días tiene la semana escolar y cuántas horas tiene cada día.
+                Usar un bucle anidado para mostrar un horario ficticio donde cada hora tenga un código de asignatura.
+            </p>
+            <h1>Generador de Horarios Semanales</h1>
+            <label for="dias">¿Cuántos días tiene la semana escolar?</label>
+            <input type="number" id="dias" min="1" placeholder="Ejemplo: 5">
+            <br>
+            <label for="horas">¿Cuántas horas tiene cada día?</label>
+            <input type="number" id="horas" min="1" placeholder="Ejemplo: 6">
+            <br><br>
+            <button onclick="generarHorario()">Generar Horario</button>
+
+            <h2>Horario Generado:</h2>
+            <pre id="horario"></pre>
+
+            <script>
+                function generarHorario() {
+                    // Obtener datos del usuario
+                    const dias = parseInt(document.getElementById("dias").value);
+                    const horas = parseInt(document.getElementById("horas").value);
+                    const materias = ["MAT", "HIS", "CIE", "LEN", "ART", "EDU"]; // Materias ficticias
+
+                    // Validar entrada
+                    if (isNaN(dias) || isNaN(horas) || dias <= 0 || horas <= 0) {
+                        alert("Por favor, ingresa valores válidos para los días y las horas.");
+                        return;
+                    }
+
+                    // Generar el horario
+                    let horario = "";
+                    for (let dia = 1; dia <= dias; dia++) {
+                        horario += `Día ${dia}:\n`;
+                        for (let hora = 1; hora <= horas; hora++) {
+                            // Asignar una materia al azar
+                            const materiaAleatoria = materias[Math.floor(Math.random() * materias.length)];
+                            horario += `  Hora ${hora}: ${materiaAleatoria}\n`;
+                        }
+                        horario += "\n";
+                    }
+
+                    // Mostrar el horario generado
+                    document.getElementById("horario").textContent = horario;
+                }
+            </script>
+        </div>
+
+
+        <div class="coral act">
+
+            <p>Actividad 13: Pedir al usuario la cantidad de productos en el inventario.
+                Usar un bucle para que el usuario introduzca el nombre y la cantidad de cada producto.
+                Mostrar un resumen del inventario al final.
+            </p>
+
+            <label for="cantidad">Cantidad de productos:</label>
+            <input type="number" id="cantidad" placeholder="Ejemplo 8">
+            <br>
+            <button onclick="almacenarProductos()">Iniciar actividad 11</button>
+
+            <pre id="productos"></pre>
+
+            <script>
+                function almacenarProductos() {
+
+
+                    const cantidad = parseInt(document.getElementById("cantidad").value)
+
+                    if (isNaN(cantidad) || cantidad <= 0) {
+                        alert("Por favor, introduce un número válido de productos.");
+                        return;
+                    }
+
+                    let inventario = [];
+
+                    // Pedir nombres y cantidad segun cantidad establecida
+
+                    for (let i = 0; i < cantidad; i++) {
+
+                        const nombre = prompt(`Introduce el nombre del producto ${i + 1}:`);
+
+                        if (!nombre) {
+
+                            alert("Intente de nuevo");
+
+                            i--;
+                            continue;
+
+                        }
+
+                        const cantidad = prompt(`Introduce la cantidad de "${nombre}"`);
+
+                        if (isNaN(cantidad) || cantidad < 0) {
+                            alert("introduce una cantidad válida.")
+                            i--;
+                            continue;
+                        }
+
+                        inventario.push({ nombre, cantidad })
+
+
+                    }
+
+                    let productos = "inventario:\n";
+
+                    inventario.forEach((producto, index) => {
+                        productos += `${index + 1}. ${producto.nombre} - Cantidad: ${producto.cantidad}\n`
+                    });
+
+                    document.getElementById("productos").textContent = productos;
+                }
+            </script>
+
+        </div>
+
+        <div class="act green">
+            <p>Actividad 14:Solicitar al usuario la cantidad de artículos que desea comprar.
+                Usar un bucle para ingresar el precio de cada artículo.
+                Mostrar el total de la compra al final.</p>
+
+            <label for="compra">Cantidad de articulos para comprar</label>
+            <input type="number" id="compra" placeholder="Ejemplo 8">
+            <button onclick="actividad14()">Comprar</button>
+            <pre id="total"></pre>
+
+            <script>
+                function actividad14() {
+
+                    const compra = parseInt(document.getElementById("compra").value)
+
+                    if (isNaN(compra) || compra <= 0) {
+                        alert("Por favor, introduce un número válido de productos.");
+                        return;
+                    }
+                    let total = 0;
+
+                    for (let i = 0; i < compra; i++) {
+                        const precio = prompt(`Introduce el precio del articulo Nº"${i + 1}"`);
+
+
+
+                        if (isNaN(precio) || precio < 0) {
+                            alert("introduce una cantidad válida.")
+                            i--;
+                            continue;
+                        }
+
+                        total += parseInt(precio);
+
+                        texto = `El precio final es de ${total} Pesos`
+                    }
+                    document.getElementById("total").textContent = texto;
+                }
+            </script>
+        </div>
+
+        <div class="coral act">
+            <p>Actividad 15:Solicitar al usuario la cantidad de empleados y el salario base de cada uno. <br>
+                Usar un bucle para calcular el salario total con un 10% de bonificación. <br>
+                Mostrar un resumen con el nombre de cada empleado y su salario final. <br>
+            </p>
+
+            <label for="empleados">Introduce la cantidad de empleados: </label>
+            <input type="number" id="empleados">
+            <button onclick="actividad15()">Comprar</button>
+            <pre id="actividad15"></pre>
+            <script>
+                function actividad15() {
+                    const empleados = parseInt(document.getElementById("empleados").value)
+
+                    const listaEmpleados = [];
+
+                    for (let i = 0; i < empleados; i++) {
+                        const nombre = prompt(`Ingrese nombre del empleado ${i + 1}`)
+                        const salarioBase = prompt(`Ingrese salario base de ${nombre}`)
+
+                        const salarioFinal = salarioBase * 1.1
+
+                        listaEmpleados.push({ nombre, salarioBase, salarioFinal })
+
+                    }
+
+                    let texto = "Resumen: "
+
+                    listaEmpleados.forEach(element => {
+                        texto += (`\nEmpleado: ${element.nombre}. \nSalario base: ${element.salarioBase} \nSalario final: ${element.salarioFinal}\n`)
+                    });
+
+
+                    document.getElementById("actividad15").textContent = texto;
+
+
+
+                }
+            </script>
+        </div>
+
+        <div class="act green">
+            <p> Actividad 16: Crear un sistema para registrar las notas de los estudiantes y calcular su promedio</p>
+            <label for="estudiantes">Ingrese cantidad de estudiantes:</label>
+            <input type="number" id="estudiantes">
+            <button onclick="actividad16()">Empezar</button>
+            <pre id="actividad16"></pre>
+            <script>
+                function actividad16() {
+                    const numEstudiantes = parseInt(document.getElementById("estudiantes").value);
+
+                    const estudiantes = []
+                    for (let i = 0; i < numEstudiantes; i++) {
+                        const nombre = prompt(`Ingrese nombre del estudiante ${i + 1}`)
+                        const nota1 = parseFloat(prompt(`Ingrese nota 1 de ${nombre}`))
+                        const nota2 = parseFloat(prompt(`Ingrese nota 2 de ${nombre}`))
+                        const nota3 = parseFloat(prompt(`Ingrese nota 3 de ${nombre}`))
+
+                        const promedio = (nota1 + nota2 + nota3) / 3
+
+                        estudiantes.push({ nombre, nota1, nota2, nota3, promedio })
+                    }
+
+                    texto = "Estudiantes: \n"
+
+                    estudiantes.forEach(element => {
+                        texto += (`Estudiante: ${element.nombre}, Promedio: ${element.promedio}\n`)
+                    });
+
+                    document.getElementById("actividad16").textContent = texto
+                }
+            </script>
+        </div>
+
+        <div class="act coral">
+            <p>Actividad 17: Crea un programa que asegura que el usuario ingrese un número válido, como contraseña. La
+               contraseña debe de ser de 4 números. </p>
+               <button onclick="actividad17()">Comenzar</button>
+               <pre id="actividad17"></pre>
+               <script>
+                function actividad17() {
+                    let password;
+                    
+                    let esValida = false;
+
+                    while (!esValida) {
+                        
+                        password = prompt("Ingrese contraseña de 4 digitos:")
+
+                        if (password && /^\d{4}$/.test(password)) {
+                            esValida = true;
+                        }
+                        else{
+                            alert("Contraseña debe ser de 4 digitos, intente de nuevo:")
+                        }
+                    }
+
+                    document.getElementById("actividad17").textContent = `Contraseña: ${password}`
+                }
+               </script>
+        </div>
+
+        <div class="act green">
+            <p>Actividad 18: Desarrolla un programa que genere la tabla de multiplicar (del 0 al 10), del número que indique el usuario.</p>
+            <label for="numAct18">Introduzca numero para hacer la tabla</label>
+            <input type="number" id="numAct18">
+            <button onclick="actividad18()">Comenzar</button>
+            <pre id="act18"></pre>
+            <script>
+                function actividad18() {
+                    
+                    const number = parseInt(document.getElementById("numAct18").value)
+
+                    let texto = `Tabla del ${number}:\n`
+
+                    for (let i = 1; i <= 10; i++) {
+                        
+                        resultado = number * i
+                        texto += ( `${number} x ${i} = ${resultado}\n `)
+                        
+                    }
+
+                    document.getElementById("act18").textContent = texto
+                }
+            </script>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Configurador de Vehículo</h1>
+        <form action="#" method="get">
+            <!-- Potencia del vehículo -->
+            <label for="potencia">Potencia (HP):</label>
+            <input type="number" id="potencia" name="potencia" required placeholder="Introduce la potencia en caballos de fuerza" min="50" max="1000">
+
+            <!-- Tipo de carrocería -->
+            <label for="carroceria">Tipo de carrocería:</label>
+            <select id="carroceria" name="carroceria" required>
+                <option value="sedan">Sedán</option>
+                <option value="suv">SUV</option>
+                <option value="deportivo">Deportivo</option>
+                <option value="camioneta">Camioneta</option>
+            </select>
+
+            <!-- Color del vehículo -->
+            <label for="color">Color:</label>
+            <div class="color-options">
+                <input type="radio" id="rojo" name="color" value="rojo" required>
+                <label for="rojo" class="color-option" style="background-color: red;"></label>
+
+                <input type="radio" id="azul" name="color" value="azul">
+                <label for="azul" class="color-option" style="background-color: blue;"></label>
+
+                <input type="radio" id="negro" name="color" value="negro">
+                <label for="negro" class="color-option" style="background-color: black;"></label>
+
+                <input type="radio" id="blanco" name="color" value="blanco">
+                <label for="blanco" class="color-option" style="background-color: white; border: 1px solid #ccc;"></label>
+            </div>
+
+            <!-- Tipo de transmisión -->
+            <label for="transmision">Transmisión:</label>
+            <select id="transmision" name="transmision" required>
+                <option value="manual">Manual</option>
+                <option value="automatica">Automática</option>
+            </select>
+
+            <!-- Botón de envío -->
+            <button type="submit">Configurar Vehículo</button>
+        </form>
+    </div>
+</body>
+</html>

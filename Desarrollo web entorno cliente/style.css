@@ -1,0 +1,41 @@
+*{
+    font-family: sans-serif;
+    background-color: grey;
+}
+.coral{
+    background-color: coral;
+   
+}
+
+.act{
+    display: block;
+    width: max-content;
+    padding: 10px;
+    margin: auto;
+    max-width: 50rcap;
+    display: flexbox;
+}
+
+
+.green{
+    background-color: greenyellow;
+}
+p{
+    margin: auto;
+    color: red;
+    background-color: black;
+    font-style: italic;
+    font-size: large;
+}
+h1{
+    color: aquamarine; 
+
+    margin: auto;
+    background-color: black;
+    width: max-content;
+}
+div{
+    padding-bottom: 1rcap;
+    padding-top: 1cap;
+    padding: 1cap;
+}

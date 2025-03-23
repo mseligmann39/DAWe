@@ -1,0 +1,19 @@
+package actividades;
+
+import java.util.Scanner;
+
+public class Actividad4_radioc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		double pi = 3.1415;
+		
+		Scanner scanner = new Scanner(System.in);
+				
+		double numero = scanner.nextDouble();
+		
+		System.out.println("La circunferencia de " + numero + " es " + pi*numero);
+	}
+
+}
